@@ -1,0 +1,36 @@
+#short{
+    color: rgb(0, 42, 255);
+    text-align: center;
+    margin-top:10px ;
+    
+}
+.pera{
+ margin-top: 0.5rem;   
+}
+#p1{
+    background-color: aqua;
+    margin: .5rem 0;
+    padding: .5rem;
+}
+.p2{
+    background-color: blueviolet;
+    margin: .5rem 0;
+    padding: .5rem;
+}
+.p3, #p1{
+    background-color: palegreen;
+    margin: .5rem 0;
+    padding: .5rem;
+}
+#p4{
+    background-color: #000;
+    color: #fff;
+    margin: .5rem 0;
+    padding: .5rem;
+}
+input{
+    border: 1px solid red;
+    padding: 0.5rem; 
+    margin: .5rem;
+
+}

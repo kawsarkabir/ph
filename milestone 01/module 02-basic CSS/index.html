@@ -6,6 +6,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="text.css">
     <link rel="stylesheet" href="selector.css">
+    <style>
+      #blog-section{
+        display: grid;
+        grid-template-columns: repeat(3, 30rem);
+        grid-gap: 1rem;
+        margin: 2rem;
+      }
+      .blog{
+        border: 2px solid gold;
+        padding: 1rem;
+        border-radius: 4px;
+      }
+    </style>
   </head>
   <body>
     <h1 style="text-align: center; margin-top: 10px ; margin-bottom: 10px ;">blogs section</h1>
@@ -34,5 +47,36 @@
       </div>
     </section>
     <!-- selecttor  -->
+    <p id="short">short form is CSS</p>
+    <p class="pera">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, corrupti exercitationem omnis reiciendis officiis officia ducimus facilis repellendus dolorum, voluptatem dolore, nisi iste nobis consequatur blanditiis velit quasi culpa labore!</p>
+
+    <section>
+      <h3>Explore in mixed selectors</h3>
+      <p id="p1">Lorem ipsum dolor sit amet.</p>
+      <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <p class="p3">Lorem ipsum dolor sit.</p>
+      <p id="p4">Lorem, ipsum.</p>
+    </section>
+    <form action="#">
+      <input type="text"> <br>
+      <input type="password" name="" id="">
+    </form>
+    <section id="blog-section">
+      <div class="blog">
+        <h3>My Fisrt Blog</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolore, eaque adipisci ullam dolorem veritatis libero dignissimos odit esse similique modi impedit repudiandae in perferendis quasi reiciendis aliquid voluptates consequatur?</p>
+      <button>More..</button>
+      </div>
+      <div class="blog">
+        <h3>My Fisrt Blog</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolore, eaque adipisci ullam dolorem veritatis libero dignissimos odit esse similique modi impedit repudiandae in perferendis quasi reiciendis aliquid voluptates consequatur?</p>
+      <button>More..</button>
+      </div>
+      <div class="blog">
+        <h3>My Fisrt Blog</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolore, eaque adipisci ullam dolorem veritatis libero dignissimos odit esse similique modi impedit repudiandae in perferendis quasi reiciendis aliquid voluptates consequatur?</p>
+      <button>More..</button>
+      </div>
+    </section>
   </body>
 </html>
