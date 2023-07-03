@@ -1,0 +1,27 @@
+.frist-blog{
+    background-color: aqua;
+    visibility: hidden;
+}
+.third-blog{
+    display: none;
+}
+.second-blog{
+    box-shadow: 1px 2px 20px rgb(176, 176, 176);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+.banner-section{
+    background-image:url(https://scontent.fdac15-1.fna.fbcdn.net/v/t39.30808-6/357385751_1782357998846892_1433177980268735216_n.jpg?_nc_cat=105&cb=99be929b-59f725be&ccb=1-7&_nc_sid=8631f5&_nc_eui2=AeH0DbnVHvdNdjmWdFN_L9yDRnxKdKF3NVNGfEp0oXc1UyZ0sI9xLuQHRcvHZtdTvvBbdMkEYw98sEAK2swz5iYe&_nc_ohc=YYv_BiRevk8AX-YOm1m&_nc_ht=scontent.fdac15-1.fna&oh=00_AfDo2I-TnWxtxzgjL4XnJ6knoXHJJAepjBSA8ZHCb6XNCw&oe=64A7996A) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 200px 0;
+    margin-top: 2rem ;
+    text-align: center;
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+p{
+    background-color: purple;
+}
+/*  */
