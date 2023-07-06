@@ -1,6 +1,11 @@
-.navbar ul{
+ul{
     display: flex;
     list-style: none;
+}
+a{
+    text-decoration: none;
+    margin: 0 10px;
+    text-transform: capitalize;
 }
 .navbar ul li{
     margin: 0 10px;
