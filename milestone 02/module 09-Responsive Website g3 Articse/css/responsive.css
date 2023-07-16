@@ -1,0 +1,36 @@
+/* banner section responsive style for mobile */
+@media screen and (max-width:576px) {
+    header{
+        padding: 20px;
+    }
+    nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .banner-text{
+        width: 100%;
+    }
+    .banner-title{
+        font-size: 1.5rem;
+     }
+     .banner-disc{
+        line-height: 28px;
+     }
+}
+/* midium device style banner section  */
+@media screen and (min-width:576px) and (max-width:960px) {
+    header{
+        padding: 50px;
+    }
+    
+    nav{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .banner-title{
+        font-size: 2.5rem;
+     }
+     .banner-disc{
+        line-height: 28px;
+     }
+}
