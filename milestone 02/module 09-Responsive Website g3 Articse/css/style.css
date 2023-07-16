@@ -12,7 +12,7 @@ body{
 }
 header{
     background-color: #ff8f0e6d;
-    padding: 50px 240px;
+    padding: 50px 0;
 }
 nav{
     display: flex;
@@ -47,9 +47,6 @@ nav li a{
     color: #fff;
 }
 /* banner section style here */
-.banner-section{
-
-}
 .banner-text{
     width: 70%;
     margin: 50px auto;
