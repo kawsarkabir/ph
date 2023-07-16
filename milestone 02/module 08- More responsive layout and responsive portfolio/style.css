@@ -19,3 +19,15 @@ img{
     grid-template-columns: 1fr 1fr;
     gap: 5px;
 }
+
+/* responsive media query  */
+@media screen and (max-width:576px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    .squre-collage{
+        grid-template-columns: 1fr;
+    }
+    
+}

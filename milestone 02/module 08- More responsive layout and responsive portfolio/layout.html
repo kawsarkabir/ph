@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout grid</title>
+    <style>
+        .header, .nav, .main, .sidebar, .advertise, footer{
+            background-color: bisque;
+            border: 2px solid tomato;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .header{
+            grid-area: header;
+        }
+        .nav{
+            grid-area: nav;
+        }
+        .main{
+            grid-area: main;
+        }
+        .sidebar{
+            grid-area: sidebar;
+        }
+        .advertise{
+            grid-area: advertise;
+        }
+        .footer{
+            grid-area: footer;
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "header header header header"
+            "nav main main sidebar"
+            "nav main main advertise"
+            "footer footer footer footer"
+            ;
+            gap: 5px;
+        }
+        @media screen and (max-width:576px) {
+            .container{
+                grid-template-areas: "header"
+                "nav"
+                "main"
+                "sidebar"
+                "advertise"
+                "footer";
+            }
+        }
+    </style>
+</head>
+<body class="container">
+    <header class="header">
+        <h3>The Header</h3>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="">Nav-1</a></li>
+            <li><a href=""></a> Nav-2</li>
+            <li><a href=""></a>Nav-3</li>
+        </ul>
+    </nav>
+    <main class="main">
+        <article>
+            <h3>main Article 1</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia cupiditate sit sed consectetur nemo veniam natus fugit maiores. Distinctio quidem atque cum earum adipisci iure, quos minima facilis amet sapiente?</p>
+        </article>
+        <article>
+            <h3>main Article 2</h3>
+            <p>Rem quasi, optio nesciunt nisi repellat, magni velit magnam accusantium, est eius quam! Explicabo quibusdam in deleniti ullam itaque asperiores dignissimos, nulla exercitationem distinctio aliquid architecto magnam sequi voluptas nam?</p>
+        </article>
+    </main>
+    <aside>
+        <div class="sidebar"><h4>
+            Sidebar
+        </h4></div>
+        <div class="advertise">
+            <h4>Advertise</h4>
+        </div>
+    </aside>
+    <footer class="footer">
+        <h3>this is footer </h3>
+    </footer>
+    
+</body>
+</html>
