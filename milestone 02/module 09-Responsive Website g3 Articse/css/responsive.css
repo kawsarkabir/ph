@@ -73,3 +73,58 @@
         font-size: 2rem;
     }
 }
+/* feature list section responsive for mibile device  */
+@media screen and (max-width:576px) {
+    .feature-list-section-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .left-content-title h1{
+        font-size: 2rem;
+    }
+    .right-content-img{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .img-child{
+        width: 50%;
+        padding: 38px 30px;
+        bottom: 65px;
+        right: 45px;
+        margin-left: 20px;
+        font-size: 1.2em;
+    }
+}
+/* medium device feature-list section  */
+@media screen and (min-width:577px) and (max-width:960px) {
+    .feature-list-section-wrapper{
+        grid-template-columns: 1fr;
+    }
+    .feature-list-section{
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    .left-content-title h1{
+        width: 55%;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 3rem;
+    }
+    .left-content-disc{
+     width: 90%;
+     margin: 0 auto;
+     text-align: center;
+    }
+    .card-container{
+        display: grid;
+        grid-template-columns:repeat(2, 1fr) ;
+        gap: 30px;
+    }
+    .right-content-img{
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .left-content h1::before{
+        border-left: none;
+    }
+}
