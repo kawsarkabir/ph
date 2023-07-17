@@ -34,3 +34,24 @@
         line-height: 28px;
      }
 }
+/* feature section monile responsive style here */
+@media screen and (max-width:576px) {
+    .feature-section{
+        text-align: center;
+    }
+    .feature-wrapper{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 50px;
+    }
+    .feature-inner img{
+        margin: 10px;
+    }
+    .feature-content{
+        width: 100%;
+    }
+    .feature-title{
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+}
