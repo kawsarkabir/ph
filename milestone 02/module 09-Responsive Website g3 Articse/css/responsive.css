@@ -6,6 +6,10 @@
     nav{
         flex-direction: column;
         gap: 20px;
+        margin-left: 20px;
+    }
+    .nav-title{
+        display: none;
     }
     .banner-text{
         width: 100%;
@@ -22,13 +26,8 @@
     header{
         padding: 50px;
     }
-    
-    nav{
-        flex-direction: column;
-        gap: 20px;
-    }
     .banner-title{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
      }
      .banner-disc{
         line-height: 28px;
@@ -41,7 +40,8 @@
     }
     .feature-wrapper{
         grid-template-columns: 1fr;
-        justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
         gap: 50px;
     }
     .feature-inner img{
@@ -52,6 +52,24 @@
     }
     .feature-title{
         margin-bottom: 10px;
+        font-size: 2rem;
+    }
+}
+/* midium device for style here feature section  */
+@media screen and (min-width:577px) and (max-width:960px) {
+    .feature-wrapper{
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .feature-section{
+        text-align: center;
+    }
+    .feature-content{
+        /* width: 100%; */
+        margin: 0 auto;
+    }
+    .feature-title{
         font-size: 2rem;
     }
 }
