@@ -128,3 +128,32 @@
         border-left: none;
     }
 }
+/* fact section responsive for mobile  */
+@media screen and (max-width:576px){
+    .fact-title{
+        width: 100%;
+        margin-left: 10px;
+    }
+    .fact-wrapper{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         left: 0;
+
+    }
+}
+/* medium device responsive for fact saction here */
+@media screen and (min-width:577px) and (max-width:960px) {
+    .fact-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        left: 0;
+        margin-left: 100px;
+    }
+    .fact-title{
+        width: 90%;
+        margin-left: 35px;
+        text-align: center;
+    }
+}
