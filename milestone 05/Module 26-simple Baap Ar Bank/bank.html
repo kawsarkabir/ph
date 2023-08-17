@@ -16,38 +16,42 @@
     <main>
       <!-- withdraw deposit balance section start -->
       <section>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 w-9/12 mx-auto mt-20 text-white">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-4 w-full px-2 lg:w-9/12 mx-auto mt-20 text-white">
           <div class="bg-purple-400 p-10 rounded-lg">
             <h4 class="text-3xl">Deposit</h4>
-            <h1 class="text-5xl"><span>$</span>00</h1>
+            <h1 class="text-5xl">$<span id="deposit-total">00</span></h1>
           </div>
           <div class="bg-indigo-400 p-10 rounded-lg">
             <h4 class="text-3xl">Withdraw</h4>
-            <h1 class="text-5xl"><span>$</span>00</h1>
+            <h1 class="text-5xl">$<span id="withdraw-total">00</span></h1>
           </div>
           <div class="bg-cyan-400 p-10 rounded-lg">
             <h4 class="text-3xl">Balance</h4>
-            <h1 class="text-5xl"><span>$</span>700</h1>
+            <h1 class="text-5xl">$<span id="balance-total">700</span></h1>
           </div>
         </div>
       </section>
       <!-- withdraw deposit balance section  end -->
       <!-- deposit and withdraw section start-->
       <section>
-        <div class="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-4 w-9/12 mx-auto mt-20">
-          <div class="bg-purple-400 p-10 rounded-lg">
+        <div class="grid md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-4 px-2 w-full lg:w-9/12 mx-auto mt-20">
+          <div class="bg-rose-400 p-10 rounded-lg">
             <h4 class="text-3xl text-white">Please Deposit</h4>
-            <input id="passworld-field" type="text" placeholder="Deposit Your Money" class="p-2 w-9/12 block my-4" />
-            <button id="submit-btn" class="bg-violet-600 py-3 px-8 rounded text-white uppercase hover:bg-violet-900 font-bold">deposit</button>
+            <input id="deposit-field" type="text" placeholder="Deposit Your Money" class="p-2 w-9/12 block my-4" />
+            <button id="deposit-btn" class="bg-violet-600 py-3 px-8 rounded text-white uppercase hover:bg-violet-900 font-bold">deposit</button>
           </div>
           <div class="bg-fuchsia-400 p-10 rounded-lg">
             <h4 class="text-3xl text-white">Please Withdraw</h4>
-            <input id="passworld-field" type="text" placeholder="Deposit Your Money" class="p-2 w-9/12 block my-4" />
-            <button id="submit-btn" class="bg-violet-600 py-3 px-8 rounded text-white uppercase hover:bg-violet-900 font-bold">withdraw</button>
+            <input id="withdraw-field" type="text" placeholder="Withdraw Your Money" class="p-2 w-9/12 block my-4" />
+            <button id="withdraw-btn" class="bg-violet-600 py-3 px-8 rounded text-white uppercase hover:bg-violet-900 font-bold">withdraw</button>
           </div>
         </div>
       </section>
       <!-- deposit and withdraw section end -->
     </main>
+
+
+    <script src="./deposit.js"></script>
+    <script src="./withdraw.js"></script>
   </body>
 </html>
