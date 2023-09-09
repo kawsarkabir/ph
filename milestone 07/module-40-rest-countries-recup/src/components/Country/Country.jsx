@@ -1,16 +1,18 @@
 import React from "react";
 
 const Country = ({ country }) => {
-  const { name, flags } = country;
+  const { name, flags, population, area, correncies } = country;
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
         <figure className="px-10 pt-10">
-          <img className="w-80 h-44 rounded-lg" src={flags.png} alt="Shoes" />
+          {<img className="w-80 h-44 rounded-lg" src={flags?.png} alt="Shoes" />}
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="card-title">{name?.common}</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
+          {<h2 className="card-title">{name?.common}</h2>}
+          {<p>Population: {population}</p>}
+          <p>Area: {area}</p>
+          {<p>Correncies: {correncies?.NPR?.name}</p>}
           <div className="card-actions">
             <button className="btn btn-primary">Details</button>
           </div>
@@ -21,3 +23,5 @@ const Country = ({ country }) => {
 };
 
 export default Country;
+
+

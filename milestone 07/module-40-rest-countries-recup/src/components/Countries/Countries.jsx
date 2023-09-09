@@ -15,7 +15,7 @@ const Countries = () => {
 
   return (
     <div>
-      <h1>How Much Country in the World:</h1>
+      <h1>How Much Country in the World: {countries.length}</h1>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
         {countries.map((country) => (
           <Country country={country} key={country.cca3} />
