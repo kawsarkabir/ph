@@ -1,10 +1,17 @@
 import React from "react";
 import './App.css'
+import Header from "./components/Header/Header";
+import Blogs from "./components/Blogs/Blogs";
+import Bookmarks from "./components/Bookmarks/Bookmarks";
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold">Hello world!</h1>
+      <Header/>
+      <div className="flex justify-between px-6 mt-8 md:flex-row gap-4 lg:flex-row flex-col">
+      <Blogs/>
+      <Bookmarks/>
+      </div>
     </div>
   );
 };
