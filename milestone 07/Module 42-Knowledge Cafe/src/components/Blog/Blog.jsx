@@ -3,7 +3,7 @@ import React from "react";
 import { FaRegBookmark } from 'react-icons/fa';
 
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleBookmarks }) => {
   const { cover, title, author_img, author, posted_date,reading_time,hashtags} = blog;
   return (
     <div>
@@ -21,7 +21,7 @@ const Blog = ({ blog }) => {
         </div>
         <div>
             <span>0{reading_time} min read</span>
-            <button className="ml-2"><FaRegBookmark/></button>
+            <button onClick={()=>handleBookmarks(blog)} className="ml-2"><FaRegBookmark/></button>
         </div>
         </div>
         <h1 className="text-3xl font-semibold my-2">{title}</h1>
@@ -36,5 +36,6 @@ const Blog = ({ blog }) => {
 
 Blog.propTypes = {
   blog: PropTypes.object,
+  handleBookmarks:PropTypes.func
 };
 export default Blog;
