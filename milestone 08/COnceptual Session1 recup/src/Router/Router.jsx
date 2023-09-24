@@ -6,6 +6,9 @@ import Product from "../Pages/Product/Product";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Login from "../Pages/Login/Login";
 import ProductsDetails from "../Pages/Product/ProductsDetails";
+import DashboardLayout from "../Layout/DashboardLayout";
+import Profile from "../Pages/Dashboard/DashboardPages/Profile";
+import EditProfile from "../Pages/Dashboard/DashboardPages/EditProfile";
 
 const Router = createBrowserRouter([
   {
@@ -28,11 +31,26 @@ const Router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <ProductsDetails />,
-        loader: ({params})=> fetch(`https://dummyjson.com/products/${params.id}`),
+        loader: ({ params }) =>
+          fetch(`https://dummyjson.com/products/${params.id}`),
       },
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: <DashboardLayout />,
+        children: [
+          {
+            path: "/dashboard",
+            element: <Dashboard />,
+          },
+          {
+            path: '/dashboard/profile', 
+            element: <Profile/>
+          },
+          {
+            path: '/dashboard/editprofile', 
+            element: <EditProfile/>
+          }
+        ],
       },
       {
         path: "/login",
