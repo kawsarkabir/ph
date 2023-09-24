@@ -12,19 +12,19 @@ const Layout = () => {
           </div>
           <ul className="flex gap-5">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink to="/" className={({isActive, isPending})=> isActive ? 'bg-green-400' : isPending ? 'pending': ''}>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">About</NavLink>
+              <NavLink to="/about" className={({isActive, isPending})=> isActive ? 'bg-green-400' : isPending ? 'pending': ''}>About</NavLink>
             </li>
             <li>
-              <NavLink to="/products">Product</NavLink>
+              <NavLink to="/products" className={({isActive, isPending})=> isActive ? 'bg-green-400' : isPending ? 'pending': ''}>Product</NavLink>
             </li>
             <li>
-              <NavLink to="/dashboard">Dashboard</NavLink>
+              <NavLink to="/dashboard" className={({isActive, isPending})=> isActive ? 'bg-green-400' : isPending ? 'pending': ''}>Dashboard</NavLink>
             </li>
             <li>
-              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/login" className={({isActive, isPending})=> isActive ? 'bg-green-400' : isPending ? 'pending': ''}>Login</NavLink>
             </li>
           </ul>
         </nav>

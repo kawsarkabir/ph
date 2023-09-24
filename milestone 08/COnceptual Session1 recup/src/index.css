@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-nav a.active{
+/* nav a.active{
   
      color: rgb(255, 59, 41);
     
-}
+} */
