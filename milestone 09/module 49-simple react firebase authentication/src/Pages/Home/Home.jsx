@@ -1,13 +1,11 @@
-import Banner from "../../Components/Header/Banner";
-import Login from "../Login/Login";
+import React from 'react';
 
 const Home = () => {
-  return (
-    <div>
-      
-      <Login/>
-    </div>
-  );
+    return (
+        <div>
+            
+        </div>
+    );
 };
 
 export default Home;

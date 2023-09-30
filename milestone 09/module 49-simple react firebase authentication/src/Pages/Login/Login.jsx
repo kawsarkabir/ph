@@ -1,48 +1,78 @@
-import { useState } from "react";
-import app from "../../firebase/firebase.init";
 import {
   GoogleAuthProvider,
   getAuth,
   signInWithPopup,
   signOut,
+  GithubAuthProvider,
 } from "firebase/auth";
 
+import app from "../../firebase/firebase.config";
+import { useState } from "react";
+
 const Login = () => {
-  const [userMan, setUserMan] = useState(null);
+  const [person, setPerson] = useState(null);
+//   const [gitUser, setGitUser] = useState(null);
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
 
-  const handleGoogleSubmit = () => {
+  const handleGoogleSignIn = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
         const user = result.user;
-        setUserMan(user);
+        setPerson(user);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => console.log(error));
   };
-  const handleLogout = () => {
+  const handleGoogleSignOut = () => {
     signOut(auth)
-      .then(() => {
-        alert("logout successfully");
-        setUserMan(null)
+      .then((result) => {
+        setPerson(null);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((error) => console.log(error));
   };
+
+  const handleGithubSignIn = () => {
+    signInWithPopup(auth, githubProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setPerson(user)
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
-    <div>
-      <h1>Login Here...</h1>
-      {userMan ? (
-        <button onClick={handleLogout}>Logout</button>
+    <div className="max-w-screen-xl mx-auto mt-14 text-center">
+      {person ? (
+        <button
+          className="btn bg-red-300 text-white rounded-lg py-4 px-12 mr-3"
+          onClick={handleGoogleSignOut}
+        >
+          sign out
+        </button>
       ) : (
-        <button onClick={handleGoogleSubmit}>Loging</button>
-      )}
-      {userMan && (
         <div>
-          <p>{userMan?.displayName}</p>
+          <button
+            className="btn bg-red-300 text-white rounded-lg py-4 px-12 mr-3"
+            onClick={handleGoogleSignIn}
+          >
+            google signIn
+          </button>
+          <button
+            className="btn bg-red-300 text-white rounded-lg py-4 px-12 mr-3"
+            onClick={handleGithubSignIn}
+          >
+            github signIn
+          </button>
+        </div>
+      )}
+
+      {person && (
+        <div>
+          <h1>Name:{person?.displayName}</h1>
+          <h1>Name:{person?.email}</h1>
+          <img src={person?.photoURL} alt="" />
         </div>
       )}
     </div>
