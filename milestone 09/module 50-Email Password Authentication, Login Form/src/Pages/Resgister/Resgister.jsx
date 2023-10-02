@@ -1,22 +1,33 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import auth from "../../firebase/firebase.config";
+import { FaEyeSlash, FaEye } from "react-icons/fa";
 
 const Resgister = () => {
   const [registerError, setRegisterError] = useState("");
-  const [successMessage, setSuccessMassage] = useState(false);
+  const [showPassword, setPassword] = useState(false);
+  const [successMessage, setSuccessMassage] = useState("");
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const accepted = e.target.terms.checked;
+    console.log(accepted);
+    setRegisterError("");
+    setSuccessMassage("");
 
-    console.log(typeof password);
     if (password.langth < 6) {
       setRegisterError("6 letter ar kom diya jabe na");
       return;
+    } else if (/[A-Z]/.test(password)) {
+      setRegisterError("boro hater lekho");
+      return;
+    } else if (!accepted) {
+      setRegisterError("acceoter out terms and conditions");
+      return;
     }
-    setRegisterError("");
-    setSuccessMassage("");
+
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const user = result.user;
@@ -45,7 +56,7 @@ const Resgister = () => {
                     <span className="label-text">Email</span>
                   </label>
                   <input
-                  required
+                    required
                     type="email"
                     name="email"
                     placeholder="email"
@@ -57,18 +68,30 @@ const Resgister = () => {
                     <span className="label-text">Password</span>
                   </label>
                   <input
-                    type="password"
+                    type={showPassword ? "text" : "password"}
                     name="password"
                     required
                     placeholder="password"
                     className="input input-bordered"
                   />
+                  <span onClick={() => setPassword(!showPassword)}>
+                    {showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}
+                  </span>
                   <label className="label">
                     <a href="#" className="label-text-alt link link-hover">
                       Forgot password?
                     </a>
                   </label>
                 </div>
+                <div className="flex">
+                  <input type="checkbox" name="terms" id="terms" />
+                  <label className="label">
+                    <span className="label-text">
+                      accepted out terms and conditons
+                    </span>
+                  </label>
+                </div>
+
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Register</button>
                   <p>
