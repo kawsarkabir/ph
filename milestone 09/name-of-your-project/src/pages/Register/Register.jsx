@@ -2,16 +2,20 @@ import { Link } from "react-router-dom";
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
+  createUserWithEmailAndPassword,
   signInWithPopup,
   signOut,
 } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
-import { FaGithub, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { useState } from "react";
 
 const Register = () => {
   const [person, setPerson] = useState("");
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const [showPassword, setPassword] = useState(false);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
@@ -20,16 +24,18 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setPerson(user);
+        setSuccess("create successfully");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => setError(error.message));
   };
   const handleSignOut = () => {
     console.log("hitesd");
     signOut(auth)
       .then(() => {
         setPerson("");
+        setSuccess("create successfully");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => setError(error.message));
   };
   const handleGithubSignIn = () => {
     console.log("github");
@@ -37,14 +43,44 @@ const Register = () => {
       .then((result) => {
         const user = result.user;
         setPerson(user);
+        setSuccess("create successfully");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => setError(error.message));
+  };
+  const handleSubmitFrom = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    setError("");
+    setSuccess("");
+
+    if (password.length < 6) {
+      setError("mamma password 6 okkhorer na hole hobena");
+      return;
+    } else if (
+      !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(password)
+    ) {
+      setError(
+        "at least 1 letter uppercase and one numbaric and samble sign use must be"
+      );
+      return;
+    }
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        setPerson(user);
+        setSuccess("create successfully");
+        console.log(user);
+      })
+      .catch((error) => setError(error.message));
   };
 
   return (
     <div className="flex justify-between min-h-screen">
       <div className=" mt-8 w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-        <form className="space-y-6" action="#">
+        <form onSubmit={handleSubmitFrom} className="space-y-6" action="#">
           <h5 className="text-xl font-medium text-gray-900 dark:text-white">
             Sign Up to our platform
           </h5>
@@ -88,13 +124,14 @@ const Register = () => {
               Your password
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="password"
               id="password"
               placeholder="Password"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               required
             />
+            <span className="relative bottom-7 left-72" onClick={()=>setPassword(!showPassword)}>{showPassword ?<FaEyeSlash/> : <FaEye></FaEye>}</span>
           </div>
           <div className="flex items-start"></div>
           <button
@@ -103,6 +140,8 @@ const Register = () => {
           >
             Sign Up
           </button>
+          <h1>{error && <p>{error}</p>}</h1>
+          <h1>{success && <p>{success}</p>}</h1>
           <div>
             <h3 className="flex gap-x-5 text-xl justify-center">
               <FaGoogle onClick={handleGoogleSignIn} />
@@ -187,6 +226,7 @@ const Register = () => {
             <span className="text-sm text-gray-500 dark:text-gray-400">
               Visual Designer
             </span>
+            <h1>{person?.email}</h1>
             <div className="flex mt-4 space-x-3 md:mt-6">
               <a
                 href="#"
