@@ -7,8 +7,11 @@ import {
   signOut,
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
+
+// step 1: create context and export it
 export const AuthContext = createContext(null);
 
+// ste 5: children name props nite hobe
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
@@ -21,6 +24,7 @@ const AuthProvider = ({ children }) => {
       unSubscribe();
     };
   }, []);
+
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -35,6 +39,7 @@ const AuthProvider = ({ children }) => {
 
   const authInfo = { user, createUser, signInUser, logOut };
   return (
+    //step 2: exiting provider added
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
 };

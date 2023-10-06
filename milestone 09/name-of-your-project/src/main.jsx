@@ -31,6 +31,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+    {/* step 3: exiting components inner div with wrap in context Name */}
     <AuthProvider>
       <RouterProvider router={router} />
     </AuthProvider>
