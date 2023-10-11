@@ -1,0 +1,103 @@
+[
+    {
+      "id": 1,
+      "brand": "Samsung",
+      "model": "Galaxy S21",
+      "price": 799.99,
+      "screen_size": "6.2 inches",
+      "camera": "12 MP (main), 64 MP (telephoto), 12 MP (ultrawide)",
+      "storage": "128GB",
+      "RAM": "8GB"
+    },
+    {
+      "id": 2,
+      "brand": "Apple",
+      "model": "iPhone 12",
+      "price": 799.00,
+      "screen_size": "6.1 inches",
+      "camera": "12 MP (main), 12 MP (ultrawide)",
+      "storage": "64GB",
+      "RAM": "4GB"
+    },
+    {
+      "id": 3,
+      "brand": "Google",
+      "model": "Pixel 5",
+      "price": 699.00,
+      "screen_size": "6.0 inches",
+      "camera": "12.2 MP (main), 16 MP (ultrawide)",
+      "storage": "128GB",
+      "RAM": "8GB"
+    },
+    {
+      "id": 4,
+      "brand": "OnePlus",
+      "model": "8T",
+      "price": 699.99,
+      "screen_size": "6.55 inches",
+      "camera": "48 MP (main), 16 MP (ultrawide)",
+      "storage": "256GB",
+      "RAM": "12GB"
+    },
+    {
+      "id": 5,
+      "brand": "Xiaomi",
+      "model": "Mi 10",
+      "price": 599.00,
+      "screen_size": "6.67 inches",
+      "camera": "108 MP (main), 13 MP (ultrawide)",
+      "storage": "128GB",
+      "RAM": "8GB"
+    },
+    {
+      "id": 6,
+      "brand": "LG",
+      "model": "Velvet",
+      "price": 499.99,
+      "screen_size": "6.8 inches",
+      "camera": "48 MP (main), 8 MP (ultrawide)",
+      "storage": "128GB",
+      "RAM": "6GB"
+    },
+    {
+      "id": 7,
+      "brand": "Sony",
+      "model": "Xperia 5 II",
+      "price": 799.99,
+      "screen_size": "6.1 inches",
+      "camera": "12 MP (main), 12 MP (ultrawide)",
+      "storage": "128GB",
+      "RAM": "8GB"
+    },
+    {
+      "id": 8,
+      "brand": "Nokia",
+      "model": "9.3 PureView",
+      "price": 599.00,
+      "screen_size": "6.3 inches",
+      "camera": "64 MP (main), 12 MP (ultrawide)",
+      "storage": "128GB",
+      "RAM": "6GB"
+    },
+    {
+      "id": 9,
+      "brand": "Motorola",
+      "model": "Moto G Power",
+      "price": 249.99,
+      "screen_size": "6.4 inches",
+      "camera": "16 MP (main), 8 MP (ultrawide)",
+      "storage": "64GB",
+      "RAM": "4GB"
+    },
+    {
+      "id": 10,
+      "brand": "Huawei",
+      "model": "P40 Pro",
+      "price": 799.00,
+      "screen_size": "6.58 inches",
+      "camera": "50 MP (main), 12 MP (periscope telephoto)",
+      "storage": "256GB",
+      "RAM": "8GB"
+    }
+  ]
+  
