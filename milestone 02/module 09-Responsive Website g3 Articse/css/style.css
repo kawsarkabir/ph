@@ -5,6 +5,7 @@
 }
 body{
     font-family: 'Work Sans', sans-serif;
+    width: 100vw;
 }
 .container{
     max-width: 1440px;

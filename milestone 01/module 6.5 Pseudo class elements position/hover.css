@@ -1,0 +1,15 @@
+input{
+    margin: 10px 0;
+    padding: 10px 20px;
+}
+input:hover{
+    color: blue;
+}
+a:visited{
+    color: gray;
+}
+ul li:first-child{
+    background-color: red;
+    padding: 8px 12px;
+    color: #fff;    
+}

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Bottle from "../Bottle/Bottle";
 import { addToLocalStore, getStoredCart } from "../../utilities/localstored";
- 
 
 const Bottles = () => {
   const [bottles, setBottles] = useState([]);
-
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
@@ -15,17 +13,17 @@ const Bottles = () => {
   }, []);
 
   // Load LOcal Store Cart
-  useEffect(()=>{
-    if(bottles.length > 0){
-      const storedCart = getStoredCart()
+  useEffect(() => {
+    if (bottles.length > 0) {
+      const storedCart = getStoredCart();
       console.log(storedCart);
     }
-  }, [bottles])
+  }, [bottles]);
 
   const handleAddToCart = (bottle) => {
     const newCart = [...cart, bottle];
     setCart(newCart);
-    addToLocalStore(bottle.id)
+    addToLocalStore(bottle.id);
   };
 
   return (

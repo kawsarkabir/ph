@@ -7,14 +7,16 @@ const PhoneDetails = () => {
   const phones = useLoaderData();
   const { id } = useParams();
 
-   useEffect(()=>{
-    const findPhone = phones?.find(details=> details.id === id);
+  useEffect(() => {
+    const findPhone = phones?.find((details) => details.id === id);
     setDetails(findPhone);
-   }, [id, phones])
-   console.log(details);
-  return <div className="my-10 container mx-auto px-10">
-    <DetailsCard details={details} />
-  </div>;
+  }, [id, phones]);
+ 
+  return (
+    <div className="my-10 container mx-auto px-10">
+      <DetailsCard details={details} />
+    </div>
+  );
 };
 
 export default PhoneDetails;

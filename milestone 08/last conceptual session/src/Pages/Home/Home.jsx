@@ -4,7 +4,7 @@ import Banner from "../../components/Header/Banner/Banner";
 
 const Home = () => {
   const phones = useLoaderData();
-  console.log(phones);
+ 
 
   return (
     <div>

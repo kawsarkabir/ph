@@ -22,3 +22,19 @@
     align-items: center;
     border-radius: 10px;
 }
+
+/* responsive css for mobile */
+@media screen and (max-width:576px) {
+    .container{
+        display: block;
+    }
+    .left{
+        width: 100%;
+        height: 30vh;
+        margin-bottom: 10px;
+    }
+    .right{
+        width: 100%;
+        height: 70vh;
+    }
+}

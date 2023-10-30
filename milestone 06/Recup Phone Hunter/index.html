@@ -60,21 +60,25 @@
           onclick="seeMoreCard()"
           id="see-more-btn"
           class="btn btn-primary hidden"
-        >see more
+        >
+          see more
         </button>
       </section>
       <!-- step 6: details modal -->
       <section>
         <!-- Open the modal using ID.showModal() method -->
-<dialog id="show_detail" class="modal modal-bottom sm:modal-middle">
-  <form method="dialog" class="modal-box">
-    <div id="show-detail-content" class="flex flex-col justify-center items-center"></div>
-    <div class="modal-action">
-      <!-- if there is a button in form, it will close the modal -->
-      <button class="btn">Close</button>
-    </div>
-  </form>
-</dialog>
+        <dialog id="show_detail" class="modal modal-bottom sm:modal-middle">
+          <form method="dialog" class="modal-box">
+            <div
+              id="show-detail-content"
+              class="flex flex-col justify-center items-center gap-y-1"
+            ></div>
+            <div class="modal-action">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </div>
+          </form>
+        </dialog>
       </section>
     </main>
 

@@ -1,7 +1,8 @@
+import PropType from 'prop-types'
 import React from "react";
 
 const Bottle = ({ bottle,handleAddToCart }) => {
-  const { name, stock, id, img, price, ratings} = bottle;
+  const { name, stock, img, price, ratings} = bottle;
   return (
     <div>
       <div className="card bg-base-100 shadow-xl">
@@ -23,5 +24,8 @@ const Bottle = ({ bottle,handleAddToCart }) => {
     </div>
   );
 };
-
+Bottle.propTypes = {
+  bottle:PropType.object.isRequired,
+  handleAddToCart:PropType.func.isRequired
+}
 export default Bottle;

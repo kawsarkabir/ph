@@ -6,7 +6,7 @@ document.getElementById('login-btn').addEventListener('click', function(){
     const userPassword = document.getElementById('user-password');
     const userPasswordValue = userPassword.value;
 
-    if(userEmailValue === 'sontan@bap.com' && userPasswordValue === 'secrect'){
+    if(userEmailValue === 'admin@gmail.com' && userPasswordValue === 'admin'){
         window.location.href = './bank.html'
     }else{
         alert('please valid a number & password')

@@ -1,15 +1,26 @@
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData } from "react-router-dom";
 
 const Users = () => {
     const users = useLoaderData()
-    console.log(users);
+    const handleDelete=_id=>{
+        console.log(_id);
+        fetch(`http://localhost:5000/users/${_id}`, {
+            method: 'DELETE',
+        })
+        .then(res=>res.json())
+        .then(data=>console.log(data))
+    }
     return (
         <div>
-            <h1>users: {users.length}</h1>
             {
-                users.map(user=> <div key={user._id}>
-
-                    <h1>name: {user.name}</h1>
+                users?.map(user=> <div key={user._id}>
+                    <h3>name:{user.name}  email: {user.email}
+                    id:{user._id}
+                     <button
+                      onClick={()=>handleDelete(user._id)}
+                     >X</button>
+                    </h3>
+             
                 </div>)
             }
         </div>
