@@ -8,7 +8,7 @@ const MyCart = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/checkout?email=${user?.email}`)
+      .get(`http://localhost:5000/checkout?email=${user?.email}` , {withCredentials: true})
       .then((res) => {
         setMyCart(res.data);
       });
