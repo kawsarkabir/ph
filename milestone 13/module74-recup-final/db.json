@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "title": "Example Title 1",
+      "likeCount": 15
+    },
+    {
+      "id": 2,
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "title": "Example Title 2",
+      "likeCount": 8
+    },
+    {
+      "id": 3,
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "title": "Example Title 3",
+      "likeCount": 20
+    },
+    {
+      "id": 4,
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "title": "Example Title 4",
+      "likeCount": 12
+    },
+    {
+      "id": 5,
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "title": "Example Title 5",
+      "likeCount": 25
+    },
+    {
+      "id": 6,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "title": "Example Title 6",
+      "likeCount": 18
+    }
+  ]
+}
