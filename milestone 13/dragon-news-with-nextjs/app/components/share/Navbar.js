@@ -15,6 +15,7 @@ import {
   Twitter,
 } from "@mui/icons-material";
 import Link from "next/link";
+import Header from "./Header";
 
 const navItems = [
   {
@@ -45,31 +46,34 @@ const navItems = [
 
 function Navbar() {
   return (
-    <AppBar position="static" className="bg-black">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Image src={logo} alt="logo"></Image>
-          <Box className="flex justify-center w-full">
-            {navItems.map((item) => (
-              <Link key={item} href={item.pathname}>
-                <Button sx={{ my: 2, color: "white", display: "block" }}>
-                  {item.route}
-                </Button>
-              </Link>
-            ))}
-          </Box>
-          {/* social menu navbar  */}
-          <Box>
-            <IconButton color="inherit" className="space-x-3">
-              <Instagram></Instagram>
-              <FacebookRounded></FacebookRounded>
-              <Twitter></Twitter>
-              <LinkedIn></LinkedIn>
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <>
+      <Header></Header>
+      <AppBar position="static" className="bg-black">
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <Image src={logo} alt="logo"></Image>
+            <Box className="flex justify-center w-full">
+              {navItems.map((item) => (
+                <Link key={item} href={item.pathname}>
+                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                    {item.route}
+                  </Button>
+                </Link>
+              ))}
+            </Box>
+            {/* social menu navbar  */}
+            <Box>
+              <IconButton color="inherit" className="space-x-3">
+                <Instagram></Instagram>
+                <FacebookRounded></FacebookRounded>
+                <Twitter></Twitter>
+                <LinkedIn></LinkedIn>
+              </IconButton>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </>
   );
 }
 export default Navbar;
